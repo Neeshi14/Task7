@@ -1,4 +1,35 @@
 # Task 7
+# Basic Konwledge about the pytorch
+1. What is PyTorch?
+
+PyTorch is a popular open-source machine learning framework, especially well-suited for deep learning. You could mention that it's developed by Facebook's AI Research lab and is known for its flexibility and ease of use.
+
+2. Key Concepts to Explain :
+
+->Tensors: Explain that tensors are the fundamental data structure in PyTorch, similar to NumPy arrays but with added capabilities for automatic differentiation (which is essential for training neural networks). 
+
+->Modules (nn.Module): If you're using custom neural network architectures, explain that nn.Module is the base class for building neural networks in PyTorch. It helps organize the network's layers and parameters.  You can say something like, "The neural network model is defined as a class inheriting from nn.Module, which allows for modular design and management of the network's components."
+
+** ->Layers: Briefly describe the types of layers you used in your network (e.g., convolutional layers, linear layers, recurrent layers).  For example:
+
+1.Convolutional Layers (Conv2d, Conv1d): "Convolutional layers are used to extract features from images (2D) or sequences (1D)."
+Linear Layers (Linear): "Linear layers (also called fully connected layers) connect all neurons in one layer to all neurons in the next layer. They are often used at the end of a network for classification."
+2.Pooling Layers (MaxPool2d, AvgPool2d): "Pooling layers reduce the spatial dimensions of feature maps (e.g., images), making the network more efficient and robust to small variations in the input."
+3.Dropout: "Dropout is a regularization technique that helps prevent overfitting by randomly deactivating neurons during training."
+4.Loss Function: Explain that the loss function measures the difference between the model's predictions and the actual target values.  Mention the specific loss function you used (e.g., Cross-Entropy Loss for classification, Mean Squared Error for regression).  "The Cross-Entropy Loss function is used to measure the difference between the predicted probabilities and the true class labels."
+
+5.Optimizer: Explain that the optimizer is responsible for updating the model's parameters (weights) to minimize the loss function.  Mention the optimizer you used (e.g., Adam, SGD).  "The Adam optimizer is used to adjust the model's parameters during training, aiming to minimize the loss."
+
+->Training Loop: Briefly describe the training process:
+
+-Forward pass: The input data is fed to the model to get predictions.
+-Loss calculation: The loss function compares predictions to the true values.
+-Backpropagation: The gradients of the loss with respect to the model's parameters are calculated.
+-Optimization: The optimizer updates the parameters based on the gradients.
+-Evaluation: I evaluated the model's performance by accuracy.  "The model's performance is evaluated using accuracy on the test dataset, which measures the percentage of correctly classified samples."
+  
+
+
 ## 1)
 This project analyzes a thyroid dataset to predict thyroid disease status using deep learning techniques.
 
@@ -53,9 +84,7 @@ Diagnosis (object): Final diagnosis (Benign/Malignant).
 
 In these the simple linear neural network using the pytorch.
 
-# Pytorch basic knowledge
-  PyTorch is a free, open-source machine learning framework that helps developers build and train deep learning models. It's written in Python and C++, and is known for its 
-  ease of use and flexibility. 
+
 
 
 
