@@ -14,8 +14,11 @@ PyTorch is a popular open-source machine learning framework, especially well-sui
 
 1.Convolutional Layers (Conv2d, Conv1d): "Convolutional layers are used to extract features from images (2D) or sequences (1D)."
 Linear Layers (Linear): "Linear layers (also called fully connected layers) connect all neurons in one layer to all neurons in the next layer. They are often used at the end of a network for classification."
+
 2.Pooling Layers (MaxPool2d, AvgPool2d): "Pooling layers reduce the spatial dimensions of feature maps (e.g., images), making the network more efficient and robust to small variations in the input."
+
 3.Dropout: "Dropout is a regularization technique that helps prevent overfitting by randomly deactivating neurons during training."
+
 4.Loss Function: Explain that the loss function measures the difference between the model's predictions and the actual target values.  Mention the specific loss function you used (e.g., Cross-Entropy Loss for classification, Mean Squared Error for regression).  "The Cross-Entropy Loss function is used to measure the difference between the predicted probabilities and the true class labels."
 
 5.Optimizer: Explain that the optimizer is responsible for updating the model's parameters (weights) to minimize the loss function.  Mention the optimizer you used (e.g., Adam, SGD).  "The Adam optimizer is used to adjust the model's parameters during training, aiming to minimize the loss."
@@ -23,9 +26,13 @@ Linear Layers (Linear): "Linear layers (also called fully connected layers) conn
 ->Training Loop: Briefly describe the training process:
 
 -Forward pass: The input data is fed to the model to get predictions.
+
 -Loss calculation: The loss function compares predictions to the true values.
+
 -Backpropagation: The gradients of the loss with respect to the model's parameters are calculated.
+
 -Optimization: The optimizer updates the parameters based on the gradients.
+
 -Evaluation: I evaluated the model's performance by accuracy.  "The model's performance is evaluated using accuracy on the test dataset, which measures the percentage of correctly classified samples."
   
 
