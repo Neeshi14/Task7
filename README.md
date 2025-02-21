@@ -38,7 +38,7 @@ Linear Layers (Linear): "Linear layers (also called fully connected layers) conn
 
 
 ## 1)
-This project analyzes a thyroid dataset to predict thyroid disease status using deep learning techniques.
+#  This project analyzes a thyroid dataset to predict thyroid disease status using deep learning techniques.
 
 ## Dataset
 
