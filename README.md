@@ -116,7 +116,8 @@ Diagnosis (object): Final diagnosis (Benign/Malignant).
 
 The model's performance is evaluated on the test set, and the following metrics are reported:
 
-* **Accuracy:** 82.87%
+* **Training Accuracy:** 82%
+* **Testing Accuracy:**  82%
 * **Classification Report:** Precision, recall, and F1-score for each class.
 
 ## Results
@@ -182,8 +183,8 @@ This project implements a convolutional neural network (CNN) using PyTorch to cl
 ## Evaluation
 
 The model's performance is evaluated on the test set, and the following metrics are reported:
-
-* **Accuracy:** 97.32%
+* **Training Accuracy:** 96%
+* **Testing Accuracy:** 97%
 
 ## Results
 
@@ -193,13 +194,4 @@ The CNN model achieves an accuracy of 97.32% on the MNIST test set, demonstratin
 
 The script includes visualizations to display sample images from the test set along with their predicted and true labels.
 
-## Future Improvements
-
-* Experiment with different CNN architectures and hyperparameters.
-* Implement data augmentation techniques to improve model robustness.
-* Explore different optimization algorithms and learning rate schedules.
-* Add evaluation metrics such as precision, recall, and F1-score.
-* Evaluate the model on other handwritten digit datasets.
-* Add more epochs for better performance.
-* Use GPU for faster training.
 
