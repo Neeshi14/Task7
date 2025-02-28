@@ -83,11 +83,45 @@ Thyroid_Cancer_Risk (object): Estimated risk of thyroid cancer (Low/Medium/High)
 Diagnosis (object): Final diagnosis (Benign/Malignant).
 
 
-## Project Overview
+1.  **Run the model:**
 
-* **Goal:**  classify nodules as benign/malignant
-* **Methods:** The neural networks are used.
-* **Results:** The model achieved 82.87% accuracy on the test set.
+    Execute the Python script to train and evaluate the model. The script will perform the following steps:
+
+    * Load and preprocess the dataset.
+    * Convert categorical features to numerical.
+    * Split the dataset into training and testing sets.
+    * Define and train the neural network model.
+    * Evaluate the model's performance.
+    * Display the accuracy
+
+
+## Model Architecture
+
+* **Type:** Feedforward Neural Network
+* **Input Layer:** 14 features
+* **Hidden Layers:** Two hidden layers with 64 and 32 neurons, respectively, using ReLU activation.
+* **Output Layer:** 2 neurons (binary classification: benign or malignant)
+* **Activation Function:** ReLU for hidden layers, Softmax (implicitly within CrossEntropyLoss) for the output layer.
+* **Loss Function:** CrossEntropyLoss
+* **Optimizer:** Adam (learning rate 0.001)
+
+## Training Details
+
+* **Epochs:** 3
+* **Batch Size:** 32
+* **Learning Rate:** 0.001
+* **Train/Test Split:** 80/20
+
+## Evaluation
+
+The model's performance is evaluated on the test set, and the following metrics are reported:
+
+* **Accuracy:** 82.87%
+* **Classification Report:** Precision, recall, and F1-score for each class.
+
+## Results
+
+The model achieves an accuracy of approximately 82.87% in classifying thyroid cancer risk.
 
 In these the simple linear neural network using the pytorch.
 
@@ -107,9 +141,65 @@ This project implements a convolutional neural network (CNN) using PyTorch to cl
 * **Source:** The MNIST dataset is a widely used benchmark dataset in computer vision. It is available through the `torchvision.datasets` module in PyTorch.
 * **Description:** The MNIST dataset consists of 60,000 training images and 10,000 test images of handwritten digits. The images are grayscale and 28x28 pixels in size.
 
-## Project Overview
+1.  **Run the model:**
 
-* **Goal:** The goal of this project is to train a CNN model that can accurately classify handwritten digits from the MNIST dataset.
-* **Methods:** A convolutional neural network (CNN) architecture is used. The network consists of convolutional layers, pooling layers, and fully connected layers. ReLU activation functions are used after the convolutional layers.  A softmax function is used for the final output to obtain probabilities for each digit class. The model is trained using the Adam optimizer and the CrossEntropyLoss loss function.
-* **Results:** The trained model achieves 97% accuracy on the MNIST test set.  
+    Execute the Python script to train and evaluate the model. The script will perform the following steps:
+
+    * Download and load the MNIST dataset.
+    * Define the CNN model architecture.
+    * Train the model.
+    * Evaluate the model's performance on the test set.
+    * Visualize predictions on sample images.
+
+
+## Model Architecture
+
+* **Type:** Convolutional Neural Network (CNN)
+* **Convolutional Layers:**
+    * `Conv2d(1, 32, 3, 1)`
+    * `Conv2d(32, 64, 3, 1)`
+    * `Conv2d(64, 128, 3, 1)`
+    * `Conv2d(128, 256, 3, 1)`
+    * `Conv2d(256, 750, 3, 1)`
+* **Activation Function:** ReLU
+* **Pooling Layers:** Max pooling (kernel size 2)
+* **Dropout Layers:** Dropout2d (0.25, 0.5, 0.25)
+* **Fully Connected Layers:**
+    * `Linear(750, 100)`
+    * `Linear(100, 10)`
+* **Output Activation:** Softmax
+* **Loss Function:** CrossEntropyLoss
+* **Optimizer:** Adam (learning rate 0.001)
+
+## Training Details
+
+* **Epochs:** 3
+* **Batch Size (Train):** 164
+* **Batch Size (Test):** 100
+* **Learning Rate:** 0.001
+* **Normalization:** `transforms.Normalize((0.1307,), (0.3081,))`
+
+## Evaluation
+
+The model's performance is evaluated on the test set, and the following metrics are reported:
+
+* **Accuracy:** 97.32%
+
+## Results
+
+The CNN model achieves an accuracy of 97.32% on the MNIST test set, demonstrating its effectiveness in classifying handwritten digits.
+
+## Visualizations
+
+The script includes visualizations to display sample images from the test set along with their predicted and true labels.
+
+## Future Improvements
+
+* Experiment with different CNN architectures and hyperparameters.
+* Implement data augmentation techniques to improve model robustness.
+* Explore different optimization algorithms and learning rate schedules.
+* Add evaluation metrics such as precision, recall, and F1-score.
+* Evaluate the model on other handwritten digit datasets.
+* Add more epochs for better performance.
+* Use GPU for faster training.
 
