@@ -43,7 +43,7 @@ Linear Layers (Linear): "Linear layers (also called fully connected layers) conn
 ## Dataset
 
 * **Name:**  Thyroid Cancer Risk Dataset
-* **Dataset name:** Thyroid_cancer_risk_data.csv
+* **Dataset name:**These is the link of the dataset [here](https://www.kaggle.com/datasets/mzohaibzeeshan/thyroid-cancer-risk-dataset).
 * **Description:**
 * There are 17 features
 
